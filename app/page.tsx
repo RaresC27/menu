@@ -9,18 +9,19 @@ export default function BohoSite() {
   const [menuTab,       setMenuTab]       = useState("starters");
   const [cart,          setCart]          = useState([]);
   const [cartOpen,      setCartOpen]      = useState(false);
-  const [menuModal,     setMenuModal]     = useState(null);
-  const [addedAnim,     setAddedAnim]     = useState(null);
+const [menuModal,     setMenuModal]     = useState<any>(null);
+const [addedAnim,     setAddedAnim]     = useState<any>(null);
   const [cartAnim,      setCartAnim]      = useState(false); 
   const [rezForm,       setRezForm]       = useState({name:"",phone:"",date:"",time:"19:00",guests:"2",notes:""});
   const [rezSent,       setRezSent]       = useState(false);
   const [rezErrors,     setRezErrors]     = useState({}); 
+  
   const [contactForm,   setContactForm]   = useState({name:"",email:"",msg:""});
   const [contactSent,   setContactSent]   = useState(false);
   const [isMobile,      setIsMobile]      = useState(false);
 
   // LOGICĂ NOUĂ PENTRU COMANDĂ LA MASĂ
-  const [tableNumber, setTableNumber] = useState(null); 
+  const [tableNumber, setTableNumber] = useState<string | null>(null);
   const [orderFlow, setOrderFlow]     = useState("cart"); 
   const [manualTable, setManualTable] = useState(""); 
 
